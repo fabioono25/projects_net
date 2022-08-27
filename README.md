@@ -1,2 +1,5 @@
-# projects_net
-Projects in .NET, related to the courses I've being done
+# Projects .NET
+
+The idea is adding a list of projects to test the features I've being studying.
+
+
