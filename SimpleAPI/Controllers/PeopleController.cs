@@ -12,7 +12,12 @@ namespace SimpleAPI.Controllers
     [ApiController]
     public class PeopleController : ControllerBase
     {
-        private readonly MockPersonRepo _repository = new MockPersonRepo();
+        private readonly IPersonRepo _repository;
+
+        public PeopleController(IPersonRepo repository)
+        {
+            _repository = repository;
+        }
 
         [HttpGet]
         public ActionResult<IEnumerable<Person>> GetAllPeople()
