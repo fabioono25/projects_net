@@ -9,7 +9,11 @@ namespace SimpleAPI.Profiles
     {
         public PeopleProfile()
         {
+            // source -> target
             CreateMap<Person, PersonReadDto>();
+            CreateMap<PersonCreateDto, Person>();
+            CreateMap<PersonUpdateDto, Person>();
+            CreateMap<Person, PersonUpdateDto>();
         }   
     }
 }

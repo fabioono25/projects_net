@@ -8,6 +8,16 @@ namespace SimpleAPI.Data
 {
     public class MockPersonRepo : IPersonRepo
     {
+        public void CreatePerson(Person person)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeletePerson(Person person)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Person> GetAllPeople() =>
             new List<Person>
             {
@@ -18,6 +28,15 @@ namespace SimpleAPI.Data
 
         public Person GetPersonById(int id) =>
             new Person { Id = 1, Name = "James", Age = 23, Identifier = "CAM" };
-        
+
+        public bool SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdatePerson(Person person)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
