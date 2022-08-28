@@ -1,8 +1,11 @@
+using Microsoft.EntityFrameworkCore;
 using SimpleAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<PersonContext>(opt =>
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("PersonConnection")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
