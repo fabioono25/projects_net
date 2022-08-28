@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //builder.Services.AddScoped<IPersonRepo, MockPersonRepo>();
 builder.Services.AddScoped<IPersonRepo, PostgresPersonRepo>();
 
