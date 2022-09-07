@@ -4,21 +4,22 @@ This code was constructed based on the course [.NET Microservices - Full Course,
 
 ## Technologies
 
--   Microservices
--   Repository Pattern
--   Using in memory database
--   Seed data without migrations
--   Using DTOs (read and create)
--   Mapping DTOs and Models using AutoMapper
--   Using Synchronous and Asynchronous communication approach between microservices
--   Publishing in DockerHub
--   Using Message Bus to communicate between two microservices
--   HttpClient and HttpClientFactory
--   Configuring multiple environments via appsettings
--   Ingress Nginx Container and Load Balancer (external calls)    
--   Using a connection with SqlServer (running via Docker in a Kubernetes pod)
--   Using Migrations (code first)    
--   gRPC with TLC
+- Microservices
+- Repository Pattern
+-
+- Using in memory database
+- Seed data without migrations
+- Using DTOs (read and create)
+- Mapping DTOs and Models using AutoMapper
+- Using Synchronous and Asynchronous communication approach between microservices
+- Publishing in DockerHub
+- Using Message Bus to communicate between two microservices
+- HttpClient and HttpClientFactory
+- Configuring multiple environments via appsettings
+- Ingress Nginx Container and Load Balancer (external calls)    
+- Using a connection with SqlServer (running via Docker in a Kubernetes pod)
+- Using Migrations (code first)    
+- gRPC with TLC
 
 
 ## Tools/Frameworks
@@ -63,7 +64,8 @@ They are two ways to do that:
 ## .NET Commands
 
 ````
-tbd
+dotnet new webapi -n PlatformService
+dotnet add package <<packageName>>
 ````
 
 
@@ -80,3 +82,33 @@ tbd
 tbd
 ````
 
+
+## Other Notes
+
+````
+	// creating a context
+    public class AppDbContext : DbContext // EntityFramework.Core
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> opt) : base(opt)
+        {
+        }
+
+        public DbSet<Platform> Platforms { get; set; }
+    }
+
+    builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseInMemoryDatabase("InMemoryDb"));
+````
+
+```
+//using context from outside
+var serviceScope = app.ApplicationServices.CreateScope();
+            Seed(serviceScope.ServiceProvider.GetService<AppDbContext>());
+```
+
+
+## Links
+
+````
+tbd
+````
