@@ -58,8 +58,8 @@ They are two ways to do that:
 
 ## Construction Steps
 
-1. Define t
-2. Item
+1. Bootstrap the PlatformService project + adding context/repository capabilities
+2. 
 
 ## .NET Commands
 
