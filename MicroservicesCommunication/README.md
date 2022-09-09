@@ -56,12 +56,19 @@ They are two ways to do that:
 
 ![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesCommunication/Assets/CommandServiceArchitecture.png)
 
+### Kubernetes Architecture
+
+![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesCommunication/Assets/KubernetesArchitecture.png)
+
+
 ## Construction Steps
 
 1. Bootstrap the PlatformService project + adding context/repository capabilities
 2. 
 
 ## .NET Commands
+
+Basic commands:
 
 ````
 dotnet new webapi -n PlatformService
@@ -70,6 +77,8 @@ dotnet add package <<packageName>>
 
 
 ## Docker Commands
+
+[After configuring the Dockerfile with the build and publish commands]
 
 Creating an image:
 
@@ -103,9 +112,20 @@ docker push <DockerHub id>/platformservice
 
 ## Kubernetes Commands
 
+
+Deploying a container image in a Kubernetes pod (platforms-depl.yaml):
+
 ````
-tbd
+kubectl apply -f platforms-depl.yaml
 ````
+
+Verify de deployments and pods:
+
+````
+kubectl get deployments
+kubectl get pods
+````
+
 
 
 ## Other Notes

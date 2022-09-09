@@ -1,0 +1,18 @@
+# Deploying a container in a Kubernetes pod
+apiVersion: apps/v1 # just specifying the version this api is using
+kind: Deployment    # we are deploying on Kubernetes
+metadata:           # identifier for our deployment
+  name: platforms-depl
+spec:
+  replicas: 1       # horizontally scaling configuration
+  selector:         # selecting what we defined in template
+    matchLabels:
+      app: platformservice
+  template:         # defining what we are deploying
+    metadata:
+      labels:
+        app: platformservice
+    spec:
+      containers:   # define the containers we are gonna deploy
+        - name: platformservice
+          image: fabioono25/platformservice
