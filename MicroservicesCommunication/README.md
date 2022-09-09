@@ -71,8 +71,33 @@ dotnet add package <<packageName>>
 
 ## Docker Commands
 
+Creating an image:
+
 ````
-tbd
+docker build -t <your dockerhub id>/platformservice .
+````
+
+Run the image as container:
+
+````
+docker run -p 8080:80 -d <docker hub id>/platformservice
+````
+
+Show runnig containers + stop + start:
+
+````
+docker ps
+docker stop <id>
+docker ps --all
+docker start <id>
+````
+
+Push your container up to DockerHub:
+
+````
+docker login -u "myusername" -p "mypassword" docker.io
+
+docker push <DockerHub id>/platformservice
 ````
 
 
@@ -109,6 +134,13 @@ var serviceScope = app.ApplicationServices.CreateScope();
 
 ## Links
 
-````
-tbd
-````
+[Dockerize an ASP.NET Core application](https://docs.docker.com/samples/dotnetcore/)
+
+
+
+
+
+
+
+
+
