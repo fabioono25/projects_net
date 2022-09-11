@@ -124,8 +124,14 @@ Verify de deployments and pods:
 ````
 kubectl get deployments
 kubectl get pods
+kubectl delete deployment platforms-depl
 ````
 
+Working with node ports (routing incoming traffic to your service):
+````
+kubectl apply -f platforms-np-srv.yaml
+kubectl get services # NodePort service running
+```
 
 
 ## Other Notes
