@@ -29,6 +29,8 @@
     <None Remove="Controllers\" />
     <None Remove="Dtos\" />
     <None Remove="Profiles\" />
+    <None Remove="SyncDataServices\" />
+    <None Remove="SyncDataServices\Http\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -36,5 +38,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Dtos\" />
     <Folder Include="Profiles\" />
+    <Folder Include="SyncDataServices\" />
+    <Folder Include="SyncDataServices\Http\" />
   </ItemGroup>
 </Project>

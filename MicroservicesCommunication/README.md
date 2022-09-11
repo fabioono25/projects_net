@@ -6,10 +6,10 @@ This code was constructed based on the course [.NET Microservices - Full Course,
 
 - Microservices
 - Repository Pattern
--
 - Using in memory database
 - Seed data without migrations
 - Using DTOs (read and create)
+- Using appSettings configuration file
 - Mapping DTOs and Models using AutoMapper
 - Using Synchronous and Asynchronous communication approach between microservices
 - Publishing in DockerHub
@@ -70,11 +70,11 @@ They are two ways to do that:
 
 Basic commands:
 
-````
+```
 dotnet new webapi -n PlatformService
 dotnet add package <<packageName>>
 dotnet new webapi -n CommandService
-````
+```
 
 
 ## Docker Commands
@@ -83,32 +83,32 @@ dotnet new webapi -n CommandService
 
 Creating an image:
 
-````
+```
 docker build -t <your dockerhub id>/platformservice .
-````
+```
 
 Run the image as container:
 
-````
+```
 docker run -p 8080:80 -d <docker hub id>/platformservice
-````
+```
 
 Show runnig containers + stop + start:
 
-````
+```
 docker ps
 docker stop <id>
 docker ps --all
 docker start <id>
-````
+```
 
 Push your container up to DockerHub:
 
-````
+```
 docker login -u "myusername" -p "mypassword" docker.io
 
 docker push <DockerHub id>/platformservice
-````
+```
 
 
 ## Kubernetes Commands
@@ -116,20 +116,21 @@ docker push <DockerHub id>/platformservice
 
 Deploying a container image in a Kubernetes pod (platforms-depl.yaml):
 
-````
+```
 kubectl apply -f platforms-depl.yaml
-````
+```
 
 Verify de deployments and pods:
 
-````
+```
 kubectl get deployments
 kubectl get pods
 kubectl delete deployment platforms-depl
-````
+```
 
 Working with node ports (routing incoming traffic to your service):
-````
+
+```
 kubectl apply -f platforms-np-srv.yaml
 kubectl get services # NodePort service running
 ```
@@ -137,7 +138,7 @@ kubectl get services # NodePort service running
 
 ## Other Notes
 
-````
+```
 	// creating a context
     public class AppDbContext : DbContext // EntityFramework.Core
     {
@@ -150,13 +151,30 @@ kubectl get services # NodePort service running
 
     builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseInMemoryDatabase("InMemoryDb"));
-````
+```
 
 ```
 //using context from outside
 var serviceScope = app.ApplicationServices.CreateScope();
             Seed(serviceScope.ServiceProvider.GetService<AppDbContext>());
 ```
+
+
+### Synchronous Messaging
+
+- Request/Response Cycle
+- Externally facing services usually synchronous (HTTP requests)
+- Create a relationship between services (creating dependencies)
+- Approachs: HTTP, gRPC
+
+### Asynchronous Messaging
+
+- No Request/Response Cycle
+- Typically used between services
+- Event bus often used
+- No direct relationship between services
+- Approachs: event model (using RabbitMQ as event bus), publish/subscriber
+- Mode complex
 
 
 ## Links
