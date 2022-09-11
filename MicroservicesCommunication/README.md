@@ -73,6 +73,7 @@ Basic commands:
 ````
 dotnet new webapi -n PlatformService
 dotnet add package <<packageName>>
+dotnet new webapi -n CommandService
 ````
 
 
