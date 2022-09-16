@@ -159,6 +159,7 @@ As I originally made a mess and pushed the bin folders to this repository, it wa
 
 ```
 git rm -r --cached .
+git add .
 git commit -am "remove ignored files"
 git push
 ```
