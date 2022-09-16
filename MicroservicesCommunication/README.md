@@ -19,6 +19,7 @@ This code was constructed based on the course [.NET Microservices - Full Course,
 - Ingress Nginx Container and Load Balancer (external calls)    
 - Using a connection with SqlServer (running via Docker in a Kubernetes pod)
 - Using Migrations (code first)    
+- Ingress controller for Kubernetes (ingress-nginx)
 - gRPC with TLC
 
 
@@ -120,13 +121,15 @@ Deploying a container image in a Kubernetes pod (platforms-depl.yaml):
 kubectl apply -f platforms-depl.yaml
 ```
 
-Verify de deployments, pods and services:
+Verify de namespaces, deployments, pods and services:
 
 ```
+kubectl get namespace
 kubectl get deployments
 kubectl get pods
 kubectl get services
 kubectl delete deployment platforms-depl
+kubectl get pods --namespace=ingress-nginx
 ```
 
 Working with node ports (routing incoming traffic to your service):
@@ -141,6 +144,14 @@ Forcing Kubernetes to refresh some image (after applying some changes):
 kubectl get deployments
 kubectl rollout restart deployment platforms-depl
 ```
+
+Configuring Ingress-Nginx [a controller for Kubernetes using Nginx as a reverse proxy and load balancer]:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
+```
+
+
 
 ## Git Commands
 
@@ -176,6 +187,13 @@ var serviceScope = app.ApplicationServices.CreateScope();
             Seed(serviceScope.ServiceProvider.GetService<AppDbContext>());
 ```
 
+When configuring the ingress-nginx in your machine, don't forget to configure the *hosts file* to be in accordance to the host you have defined in ingress-srv.yaml file:
+
+- For Windows: C:\Windows\System32\Drivers\etc\hosts
+- For Mac: /private/etc/hosts
+
+Add the value:  127.0.0.1 microservices.com
+ 
 
 ### Synchronous Messaging
 
@@ -197,6 +215,8 @@ var serviceScope = app.ApplicationServices.CreateScope();
 ## Links
 
 [Dockerize an ASP.NET Core application](https://docs.docker.com/samples/dotnetcore/)
+
+[Ingress-nginx](https://github.com/kubernetes/ingress-nginx)
 
 
 
