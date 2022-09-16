@@ -120,11 +120,12 @@ Deploying a container image in a Kubernetes pod (platforms-depl.yaml):
 kubectl apply -f platforms-depl.yaml
 ```
 
-Verify de deployments and pods:
+Verify de deployments, pods and services:
 
 ```
 kubectl get deployments
 kubectl get pods
+kubectl get services
 kubectl delete deployment platforms-depl
 ```
 
@@ -133,6 +134,12 @@ Working with node ports (routing incoming traffic to your service):
 ```
 kubectl apply -f platforms-np-srv.yaml
 kubectl get services # NodePort service running
+```
+
+Forcing Kubernetes to refresh some image (after applying some changes):
+```
+kubectl get deployments
+kubectl rollout restart deployment platforms-depl
 ```
 
 

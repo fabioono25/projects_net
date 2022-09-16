@@ -2,31 +2,31 @@
 apiVersion: apps/v1 # just specifying the version this api is using
 kind: Deployment    # we are deploying on Kubernetes
 metadata:           # identifier for our deployment
-  name: platforms-depl
+  name: commands-depl
 spec:
   replicas: 1       # horizontally scaling configuration
   selector:         # selecting what we defined in template
     matchLabels:
-      app: platformservice
+      app: commandservice
   template:         # defining what we are deploying
     metadata:
       labels:
-        app: platformservice
+        app: commandservice
     spec:
       containers:   # define the containers we are gonna deploy
-        - name: platformservice
-          image: fabioono25/platformservice:latest
+        - name: commandservice
+          image: fabioono25/commandservice:latest
 ---  # separare deployment
 apiVersion: v1
 kind: Service
 metadata:
-  name: platforms-clusterip-srv
+  name: commands-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: platformservice
+    app: commandservice
   ports:
-    - name: platformservice
+    - name: commandservice
       protocol: TCP
       port: 80
       targetPort: 80

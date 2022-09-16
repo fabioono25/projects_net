@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{FE43FFEB-0B03-4003-A72F-7BFDEB7FAB5E}|Default">
-  <MonoDevelop.Ide.ItemProperties.PlatformService PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherForecast.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="15" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PlatformService" expanded="True">
             <Node name="PlatformService" expanded="True">
-              <Node name="WeatherForecast.cs" selected="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -20,9 +20,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PlatformService PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/Controllers/PlatformsController.cs" relfile="Controllers/PlatformsController.cs" line="55" column="1" />
+      <Breakpoint file="/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/Program.cs" relfile="Program.cs" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

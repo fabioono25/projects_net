@@ -1,12 +1,6 @@
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.csproj.AssemblyReference.cache
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.GeneratedMSBuildEditorConfig.editorconfig
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.AssemblyInfoInputs.cache
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.AssemblyInfo.cs
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.csproj.CoreCompileInputs.cache
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.MvcApplicationPartsAssemblyInfo.cs
-/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.MvcApplicationPartsAssemblyInfo.cache
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/appsettings.Development.json
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/appsettings.json
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/appsettings.Production.json
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/PlatformService
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/PlatformService.deps.json
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/PlatformService.runtimeconfig.json
@@ -53,6 +47,13 @@
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.csproj.AssemblyReference.cache
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.AssemblyInfoInputs.cache
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.AssemblyInfo.cs
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.csproj.CoreCompileInputs.cache
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.MvcApplicationPartsAssemblyInfo.cs
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/PlatformService.MvcApplicationPartsAssemblyInfo.cache
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/staticwebassets.build.json
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/staticwebassets.development.json
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesCommunication/PlatformService/obj/Debug/net6.0/scopedcss/bundle/PlatformService.styles.css
