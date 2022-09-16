@@ -142,6 +142,17 @@ kubectl get deployments
 kubectl rollout restart deployment platforms-depl
 ```
 
+## Git Commands
+
+As I originally made a mess and pushed the bin folders to this repository, it was necessary a clean command in order to fix everything accordingly:
+
+```
+git rm -r --cached .
+git add .
+git commit -am "remove ignored files"
+git push
+```
+
 
 ## Other Notes
 
