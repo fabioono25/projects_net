@@ -121,7 +121,7 @@ Deploying a container image in a Kubernetes pod (platforms-depl.yaml):
 kubectl apply -f platforms-depl.yaml
 ```
 
-Verify de namespaces, deployments, pods and services:
+Verify de namespaces, deployments, pods, services, storage class and pvc (Persistent Volume Claim):
 
 ```
 kubectl get namespace
@@ -130,6 +130,8 @@ kubectl get pods
 kubectl get services
 kubectl delete deployment platforms-depl
 kubectl get pods --namespace=ingress-nginx
+kubectl get storageclass
+kubectl get pvc
 ```
 
 Working with node ports (routing incoming traffic to your service):
@@ -151,6 +153,12 @@ Configuring Ingress-Nginx [a controller for Kubernetes using Nginx as a reverse 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
 ```
 
+Adding a Kubernetes Secrets:
+```
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="pwd$%123123"
+kubectl create secret generic postgres --from-literal=SA_PASSWORD="pwd"
+kubectl get secret
+``
 
 
 ## Git Commands
@@ -219,9 +227,17 @@ Add the value:  127.0.0.1 microservices.com
 
 [Ingress-nginx](https://github.com/kubernetes/ingress-nginx)
 
+[Deploying SQL containers to a Kubernetes cluster](https://rajanieshkaushikk.com/2021/02/27/how-to-deploy-sql-server-containers-to-a-kubernetes-cluster-for-high-availability/)
+
+[Deploying PostgeSQL on Kubernetes](https://phoenixnap.com/kb/postgresql-kubernetes)
+
+[Deploy an Azure SQL Edge container in Kubernetes] (https://learn.microsoft.com/en-us/azure/azure-sql-edge/deploy-kubernetes)
 
 
 
+## Observations
+
+I personally had some issues deploying SqlServer to Kubernetes. At the beginning the problem was because of M1 ARM architecture (and there is no support for SQL Express for this architecture yet). The turnaround was using an Azure SQL Edge image, however I had problems configuring the load balancer, so I made use of Postgres for this project (hopefully upgrading it to SQL Express in a near future).
 
 
 
