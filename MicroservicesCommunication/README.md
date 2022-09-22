@@ -77,6 +77,11 @@ dotnet add package <<packageName>>
 dotnet new webapi -n CommandService
 ```
 
+Migrations commands:
+```
+dotnet ef migrations add InitialMigration
+```
+
 
 ## Docker Commands
 
@@ -160,6 +165,11 @@ kubectl create secret generic postgres --from-literal=SA_PASSWORD="pwd"
 kubectl get secret
 ``
 
+Connecting to a Postgres instance via command line:
+```
+kubectl exec -it postgres-54ff8b87c7-hxzb8 -- psql -h localhost -U admin --password -p 5432 postgresdb
+```
+
 
 ## Git Commands
 
@@ -202,6 +212,7 @@ When configuring the ingress-nginx in your machine, don't forget to configure th
 - For Mac: /private/etc/hosts
 
 Add the value:  127.0.0.1 microservices.com
+
  
 
 ### Synchronous Messaging
