@@ -1,22 +1,21 @@
-# Deploying a container in a Kubernetes pod
-apiVersion: apps/v1 # just specifying the version this api is using
-kind: Deployment    # we are deploying on Kubernetes
-metadata:           # identifier for our deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: commands-depl
 spec:
-  replicas: 1       # horizontally scaling configuration
-  selector:         # selecting what we defined in template
+  replicas: 1
+  selector:
     matchLabels:
       app: commandservice
-  template:         # defining what we are deploying
+  template:
     metadata:
       labels:
         app: commandservice
     spec:
-      containers:   # define the containers we are gonna deploy
+      containers:
         - name: commandservice
           image: fabioono25/commandservice:latest
----  # separare deployment
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -26,7 +25,7 @@ spec:
   selector:
     app: commandservice
   ports:
-    - name: commandservice
-      protocol: TCP
-      port: 80
-      targetPort: 80
+  - name: commandservice
+    protocol: TCP
+    port: 80
+    targetPort: 80 

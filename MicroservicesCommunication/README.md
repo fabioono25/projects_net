@@ -158,6 +158,11 @@ Configuring Ingress-Nginx [a controller for Kubernetes using Nginx as a reverse 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
 ```
 
+Restart a Kubernetes Pod (after push to DockerHub):
+```
+kubectl rollout restart deployment <deploymentName>
+```
+
 Adding a Kubernetes Secrets:
 ```
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="pwd$%123123"
