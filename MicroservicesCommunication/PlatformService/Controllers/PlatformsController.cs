@@ -52,7 +52,7 @@ namespace PlatformService.Controllers
         [HttpPost]
         public async Task<ActionResult<PlatformReadDto>> CreatePlatform(PlatformCreateDto platformCreateDto)
         {
-            Console.WriteLine($"Creating a Pplatform: {platformCreateDto.Name}...");
+            Console.WriteLine($"Creating a Platform: {platformCreateDto.Name}...");
 
             var platform = _mapper.Map<Platform>(platformCreateDto);
 
