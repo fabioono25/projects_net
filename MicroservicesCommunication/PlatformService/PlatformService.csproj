@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +35,8 @@
     <None Remove="SyncDataServices\Http\" />
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <None Remove="Migrations\" />
+    <None Remove="RabbitMQ.Client" />
+    <None Remove="AsyncDataServices\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -44,5 +47,6 @@
     <Folder Include="SyncDataServices\" />
     <Folder Include="SyncDataServices\Http\" />
     <Folder Include="Migrations\" />
+    <Folder Include="AsyncDataServices\" />
   </ItemGroup>
 </Project>

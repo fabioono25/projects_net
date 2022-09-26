@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.Dtos;
 using PlatformService.Models;
@@ -18,12 +19,17 @@ namespace PlatformService.Controllers
         private readonly IPlatformRepo _repository;
         private readonly IMapper _mapper;
         private readonly ICommandDataClient _command;
+        private readonly IMessageBusClient _messageBusClient;
 
-        public PlatformsController(IPlatformRepo repository, IMapper mapper, ICommandDataClient command)
+        public PlatformsController(IPlatformRepo repository,
+                                   IMapper mapper,
+                                   ICommandDataClient command,
+                                   IMessageBusClient messageBusClient)
         {
             _repository = repository;
             _mapper = mapper;
             _command = command;
+            _messageBusClient = messageBusClient;
         }
 
         [HttpGet]
@@ -61,6 +67,7 @@ namespace PlatformService.Controllers
 
             var platformReadDto = _mapper.Map<PlatformReadDto>(platform);
 
+            // Sync message
             try
             {
                 await _command.SendPlatformToCommand(platformReadDto);
@@ -68,6 +75,18 @@ namespace PlatformService.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"-- Could not send synchronously (from Platform to Command service): {ex.Message}.");
+            }
+
+            // Async message
+            try
+            {
+                var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
+                platformPublishedDto.Event = "Platform_Published"; //name of the event (it should be saved somewhere
+                _messageBusClient.PublishNewPlatform(platformPublishedDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"-- Could not send asynchronously (from Platform to Command service): {ex.Message}.");
             }
 
             return CreatedAtRoute(nameof(GetPlatformsById) , new { Id = platformReadDto.Id }, platformReadDto);
