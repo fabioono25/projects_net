@@ -279,7 +279,7 @@ builder.Services.AddHostedService<MessageBusSubscriber>();
 
 [Deploy an Azure SQL Edge container in Kubernetes] (https://learn.microsoft.com/en-us/azure/azure-sql-edge/deploy-kubernetes)
 
-
+[Postman Tests](https://www.getpostman.com/collections/f83febf8c7570477b86e)
 
 ## Observations
 
