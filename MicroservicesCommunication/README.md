@@ -218,7 +218,37 @@ When configuring the ingress-nginx in your machine, don't forget to configure th
 
 Add the value:  127.0.0.1 microservices.com
 
- 
+Using a long-running process to create an Event Listener:
+
+```
+public class MessageBusSubscriber : BackgroundService
+
+...
+
+protected override Task ExecuteAsync(CancellationToken stoppingToken)
+{
+    stoppingToken.ThrowIfCancellationRequested();
+
+    var consumer = new EventingBasicConsumer(_channel);
+
+    consumer.Received += (ModuleHandle, ea) =>
+    {
+        Console.WriteLine("-- Event Received");
+
+        var body = ea.Body;
+        var notificationMessage = Encoding.UTF8.GetString(body.ToArray());
+
+        _eventProcessor.ProcessEvent(notificationMessage);
+    };
+
+    _channel.BasicConsume(queue: _queueName, autoAck: true, consumer: consumer);
+
+    return Task.CompletedTask;
+}
+...
+builder.Services.AddHostedService<MessageBusSubscriber>();
+
+```
 
 ### Synchronous Messaging
 

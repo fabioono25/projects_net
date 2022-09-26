@@ -27,6 +27,7 @@ namespace CommandService.EventProcessing
             switch (eventType)
             {
                 case EventType.PlatformPublished:
+                    AddPlatform(message);
                     break;
                 default:
                     break;
@@ -35,7 +36,7 @@ namespace CommandService.EventProcessing
 
         private EventType DetermineEventType(string notificationMessage)
         {
-            Console.WriteLine("--determine event");
+            Console.WriteLine(" --Determine event");
 
             var eventType = JsonSerializer.Deserialize<GenericEventDto>(notificationMessage);
 
@@ -67,6 +68,7 @@ namespace CommandService.EventProcessing
                 {
                     repo.CreatePlatform(platform);
                     repo.SaveChanges();
+                    Console.WriteLine("-- Platform Added!");
                 } else
                     Console.WriteLine("-- Platform already exists...");
             }
