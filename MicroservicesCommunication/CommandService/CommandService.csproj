@@ -15,6 +15,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +27,16 @@
     <None Remove="Data\" />
     <None Remove="Dtos\" />
     <None Remove="Profiles\" />
+    <None Remove="RabbitMQ.Client" />
+    <None Remove="EventProcessing\" />
+    <None Remove="AsyncDataServices\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Dtos\" />
     <Folder Include="Profiles\" />
+    <Folder Include="EventProcessing\" />
+    <Folder Include="AsyncDataServices\" />
   </ItemGroup>
 </Project>
