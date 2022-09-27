@@ -250,6 +250,22 @@ builder.Services.AddHostedService<MessageBusSubscriber>();
 
 ```
 
+### gRPC
+
+Necessary Nuget packages to use gRPC.
+
+Server (PlatformService):
+
+* Grpc.AspNetCore
+
+
+Client (CommandService):
+
+* Grpc.Tools
+* Grpc.Net.Client
+* Google.Protobuf
+
+
 ### Synchronous Messaging
 
 - Request/Response Cycle

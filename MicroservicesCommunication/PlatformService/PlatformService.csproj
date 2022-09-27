@@ -18,6 +18,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
     <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +38,9 @@
     <None Remove="Migrations\" />
     <None Remove="RabbitMQ.Client" />
     <None Remove="AsyncDataServices\" />
+    <None Remove="Grpc.AspNetCore" />
+    <None Remove="Protos\" />
+    <None Remove="SyncDataServices\Grpc\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -48,5 +52,11 @@
     <Folder Include="SyncDataServices\Http\" />
     <Folder Include="Migrations\" />
     <Folder Include="AsyncDataServices\" />
+    <Folder Include="Protos\" />
+    <Folder Include="SyncDataServices\Grpc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <Protobuf Include="Protos\platforms.proto" GrpcServices="Server" />
   </ItemGroup>
 </Project>
