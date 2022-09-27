@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'CommandsService' " />
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
@@ -16,6 +17,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
     <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.49.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Grpc.Net.Client" Version="2.49.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.21.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +37,13 @@
     <None Remove="RabbitMQ.Client" />
     <None Remove="EventProcessing\" />
     <None Remove="AsyncDataServices\" />
+    <None Remove="Grpc.Tools" />
+    <None Remove="Grpc.Net.Client" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Protos\" />
+    <None Remove="SyncDataServices\" />
+    <None Remove="SyncDataServices\Grpc\" />
+    <None Remove="protobuf-net.Grpc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -38,5 +52,12 @@
     <Folder Include="Profiles\" />
     <Folder Include="EventProcessing\" />
     <Folder Include="AsyncDataServices\" />
+    <Folder Include="Protos\" />
+    <Folder Include="SyncDataServices\" />
+    <Folder Include="SyncDataServices\Grpc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <Protobuf Include="Protos\platforms.proto" GrpcServices="Client" />
   </ItemGroup>
 </Project>

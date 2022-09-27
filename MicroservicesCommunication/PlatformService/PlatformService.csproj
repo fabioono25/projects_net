@@ -41,6 +41,7 @@
     <None Remove="Grpc.AspNetCore" />
     <None Remove="Protos\" />
     <None Remove="SyncDataServices\Grpc\" />
+    <None Remove="protobuf-net.Grpc.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
