@@ -301,6 +301,12 @@ Client (CommandService):
 
 I personally had some issues deploying SqlServer to Kubernetes. At the beginning the problem was because of M1 ARM architecture (and there is no support for SQL Express for this architecture yet). The turnaround was using an Azure SQL Edge image, however I had problems configuring the load balancer, so I made use of Postgres for this project (hopefully upgrading it to SQL Express in a near future).
 
+## How to extend it
+
+- Find a way to use gRPC locally with Apple M1 machine
+- Extend use of HTTPS/TLS
+- Service Discovery approach
+
 
 
 
