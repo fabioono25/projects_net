@@ -5,10 +5,10 @@ namespace MinAPI.Data
 {
     public interface ICommandRepo
     {
-        Task SaveChanges();
-        Task<Command?> GetCommandById(int id);
-        Task<IEnumerable<Command>> GetAllCommands();
-        Task CreateCommand(Command cmd);
+        Task SaveChangesAsync();
+        Task<Command?> GetCommandByIdAsync(int id);
+        Task<IEnumerable<Command>> GetAllCommandsAsync();
+        Task CreateCommandAsync(Command cmd);
 
         void DeleteCommand(Command cmd);
     }

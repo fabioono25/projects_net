@@ -1,5 +1,6 @@
 # .NET Minimal API Example
 
+
 ## Definition
 
 Minimal APIs are a way to create HTTP APIs with minimal dependencies.
@@ -17,6 +18,7 @@ Some missing features, comparing with the normal WebAPI:
 - Filters absent: hability to allow code to run befor or after specific stages in the request pipeline (authorization, resource, action, exception, result).
 
 - Custom model binding (IModelBinder) absent: the model binder allows mapping between incoming request data and application model (as an enhancement of your model).
+
 
 ## Technologies Used
 
@@ -41,6 +43,7 @@ Creating the project:
 dotnet new webapi -minimal -n MinAPI
 ```
 
+
 Fix invalid state certificates (HTTPS):
 
 ```
@@ -48,10 +51,12 @@ dotnet dev-certs https --clean
 dotnet dev-certs https --trust
 ``` 
 
+
 Running in hot-reload mode:
 ```
 dotnet watch
 ```
+
 
 Using User Secrets:
 
@@ -62,10 +67,13 @@ dotnet user-secrets set "Password" "pa55w0rd;"
 builder.Configuration["UserId"]  
 ```
 
+
 Docker Command:
+
 ```
 docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=123ABC%&$' -e 'MSSQL_PID=Developer' -p 1433:1433 --name azuresqledge -d mcr.microsoft.com/azure-sql-edge
 ```
+
 
 Migrations:
 
@@ -74,6 +82,22 @@ dotnet tool install --global dotnet-ef
 dotnet ef migrations initialMigration
 dotnet ef database update
 ```
+
+
+Example of an endpoint (GET):
+
+```
+app.MapGet("api/v1/commands/{id}", async (ICommandRepo repository, IMapper mapper, int id) =>
+{
+    var command = await repository.GetCommandByIdAsync(id);
+
+    if (command != null)
+        return Results.Ok(mapper.Map<CommandReadDto>(command));
+
+    return Results.NotFound();
+});
+```
+
 
 ## Links
 
