@@ -22,7 +22,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 
 ## Solution Architecture
 
-![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/Assets/architecture.png)
+![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/architecture.png)
 
 ### Catalog.API Service Architecture
 
