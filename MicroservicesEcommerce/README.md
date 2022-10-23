@@ -75,6 +75,10 @@ docker run -d -p 27017:27017 --name test-mongo mongo:latest
 docker exec -it test-mongo bash
 mongosh
 show databases
+use CatalogDb
+db.getCollectionNames()
+db.Products.help()
+db.Products.find()
 ```
 
 ### gRPC
