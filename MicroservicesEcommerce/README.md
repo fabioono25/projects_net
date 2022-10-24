@@ -60,6 +60,9 @@ The Catalog microservices is going to use the layered architecture:
 
 ## Docker Commands
 
+```
+```
+
 ## Kubernetes Commands
 
 ## Other Notes
