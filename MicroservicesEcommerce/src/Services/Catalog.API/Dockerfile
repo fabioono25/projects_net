@@ -15,6 +15,7 @@ RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "Catalog.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
+
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
