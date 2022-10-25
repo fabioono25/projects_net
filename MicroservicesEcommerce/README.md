@@ -7,7 +7,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 - Microservices.
 - Repository Pattern.
 - API Gateway.
-- 
+- gRPC
 
 
 ## Tools/Frameworks
@@ -17,16 +17,17 @@ This code was constructed based on the articles [Microservices Architecture on .
 - Docker.
 - Swagger.
 - MongoDB (document-oriented database, based on BSON-Binary JSON format).
-- 
+- Redis
+- MassTransit
+- RabbitMQ
 
-
-## Developed Services
-
-- 
 
 ## Solution Architecture
 
 ![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/architecture.png)
+
+## Developed Services
+
 
 ### Catalog.API Service Architecture
 
@@ -46,6 +47,14 @@ The Catalog microservices is going to use the layered architecture:
 
 
 ### Basket.API Service Architecture
+
+The Basket API will be responsible for managing basket and basket items.
+
+The data will be saved in Redis. Redis is an in-memory, key-value NoSQL database. It is fast and works synchronously.
+
+Discount will be calculated using gRPC inter-service synchronous communication.
+
+Checkout will be implemented using RabbitMQ and MassTransit.
 
 
 ### API Gateway Architecture
@@ -82,6 +91,21 @@ use CatalogDb
 db.getCollectionNames()
 db.Products.help()
 db.Products.find()
+```
+
+## Redis
+
+```
+docker pull redis
+docker run -d -p 6379:6379 --name test-redis redis
+docker logs -f test-redis
+docker exec -it test-redis /bin/bash
+> redis-cli
+> ping
+> set key TestKey
+> get key
+> set name Josh
+> get name
 ```
 
 ### gRPC

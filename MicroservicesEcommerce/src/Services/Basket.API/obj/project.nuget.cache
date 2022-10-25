@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "NPOvQN+A6SkAHjy/eXPqH466Ngb/unSb0+ih+/zve2BZEv8MFxaYof3at9mY0U3TODrLbEJHaiQYdbEnneT1JA==",
+  "success": true,
+  "projectFilePath": "/Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Basket.API/Basket.API.csproj",
+  "expectedPackageFiles": [
+    "/Users/fabioono25/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
