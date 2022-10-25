@@ -50,7 +50,7 @@ The Catalog microservices is going to use the layered architecture:
 
 The Basket API will be responsible for managing basket and basket items.
 
-The data will be saved in Redis. Redis is an in-memory, key-value NoSQL database. It is fast and works synchronously.
+The data will be saved in Redis. Redis is an in-memory, key-value NoSQL database. It is fast and works synchronously. It is ideal for working with distributed caching approach.
 
 Discount will be calculated using gRPC inter-service synchronous communication.
 
