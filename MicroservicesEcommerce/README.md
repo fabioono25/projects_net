@@ -20,6 +20,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 - Redis
 - MassTransit
 - RabbitMQ
+- Portainer
 
 
 ## Solution Architecture
@@ -107,6 +108,15 @@ docker exec -it test-redis /bin/bash
 > set name Josh
 > get name
 ```
+
+## Portainer
+
+Container management tool. Manage environments, deploy applications, monitor app performance, triangle problems.
+
+Portainer runs as a Docker container.
+
+First time that you run Portainer, it is necessary to create a user and password (admin, admin12345678 for example).
+
 
 ### gRPC
 
