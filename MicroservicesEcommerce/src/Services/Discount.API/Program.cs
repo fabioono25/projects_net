@@ -1,4 +1,6 @@
-﻿using Discount.API.Repositories;
+﻿using System.Globalization;
+using Discount.API.Data;
+using Discount.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+PrepDb.ExecuteMigrations(app.Configuration);
 
 app.Run();
 

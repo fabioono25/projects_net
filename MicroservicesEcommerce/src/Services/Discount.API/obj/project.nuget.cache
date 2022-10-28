@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Ew1ArV1NwokaFTfSjnMEdE2Yk83Tcz4zH8f2Gnh/5xsrMCvLqwC8rBa5v4uksj0ZTuDybSQywpeOX97vgw6umA==",
+  "dgSpecHash": "YPYiMwrG8ZEFs5RHo79muW4Cmf6qjC1+O/t5ljVU32tODesbzgqUd1NN4EdYpdpnwzOPRGm9qw+i1GEoYdwTZA==",
   "success": true,
   "projectFilePath": "/Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/Discount.API.csproj",
   "expectedPackageFiles": [
+    "/Users/fabioono25/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
     "/Users/fabioono25/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/fabioono25/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/npgsql/6.0.7/npgsql.6.0.7.nupkg.sha512",
     "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/fabioono25/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/fabioono25/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

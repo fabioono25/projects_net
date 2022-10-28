@@ -125,8 +125,6 @@ Container management tool. Manage environments, deploy applications, monitor app
 
 Portainer runs as a Docker container.
 
-First time that you run Portainer, it is necessary to create a user and password (admin, admin12345678 for example).
-
 ## PostgreSQL
 
 - Open-source Relational Database.

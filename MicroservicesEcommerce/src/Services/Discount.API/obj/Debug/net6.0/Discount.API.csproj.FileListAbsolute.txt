@@ -25,3 +25,5 @@
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/obj/Debug/net6.0/Discount.API.pdb
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/obj/Debug/net6.0/Discount.API.genruntimeconfig.cache
 /Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/obj/Debug/net6.0/ref/Discount.API.dll
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/bin/Debug/net6.0/Dapper.dll
+/Users/fabioono25/Documents/workspace/projects_net/MicroservicesEcommerce/src/Services/Discount.API/bin/Debug/net6.0/Npgsql.dll
