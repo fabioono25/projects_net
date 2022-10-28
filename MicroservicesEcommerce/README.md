@@ -19,6 +19,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 - MongoDB (document-oriented database, based on BSON-Binary JSON format).
 - Redis.
 - PostgeSQL.
+- Dapper.
 - MassTransit.
 - RabbitMQ.
 - Portainer.
@@ -63,6 +64,9 @@ Checkout will be implemented using RabbitMQ and MassTransit.
 The main feature of Discount API is the synchronous communication via gRPC with Basket API. PostgreSQL is used as the database for this project.
 
 For this project, the Coupon table was created manually.
+
+Dapper is the micro-ORM for the communication with PostgreSQL.
+
 
 ### API Gateway Architecture
 
@@ -130,12 +134,19 @@ First time that you run Portainer, it is necessary to create a user and password
 - ACID compliance.
 - Good performance.
 
+## Dapper
+
+Popular and simple object mapping tool (micro-ORM). It maps queries to objects and, because of its low-level characteristics, it is very fast.
+
+
 ### gRPC
 
 
 ## Links
 
 [Configurate PgAdmin4 using Docker](https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#environment-variables)
+
+[Learn Dapper](https://www.learndapper.com/)
 
 ## Observations
 

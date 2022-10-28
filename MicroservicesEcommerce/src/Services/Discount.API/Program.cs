@@ -1,6 +1,8 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Discount.API.Repositories;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
