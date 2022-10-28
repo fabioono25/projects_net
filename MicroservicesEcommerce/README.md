@@ -30,7 +30,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 ## Developed Services
 
 
-### Catalog.API Service Architecture
+### Catalog.API Service
 
 The Catalog API will implement CRUD operations over Product and Category, using MongoDB database.
 
@@ -47,7 +47,7 @@ The Catalog microservices is going to use the layered architecture:
 - Infra Layer: persistence operations.
 
 
-### Basket.API Service Architecture
+### Basket.API Service
 
 The Basket API will be responsible for managing basket and basket items.
 
@@ -56,6 +56,10 @@ The data will be saved in Redis. Redis is an in-memory, key-value NoSQL database
 Discount will be calculated using gRPC inter-service synchronous communication.
 
 Checkout will be implemented using RabbitMQ and MassTransit.
+
+### Discount.API Service
+
+The main feature of Discount API is the synchronous communication via gRPC with 
 
 
 ### API Gateway Architecture
