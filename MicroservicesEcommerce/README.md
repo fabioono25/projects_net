@@ -17,10 +17,11 @@ This code was constructed based on the articles [Microservices Architecture on .
 - Docker.
 - Swagger.
 - MongoDB (document-oriented database, based on BSON-Binary JSON format).
-- Redis
-- MassTransit
-- RabbitMQ
-- Portainer
+- Redis.
+- PostgeSQL.
+- MassTransit.
+- RabbitMQ.
+- Portainer.
 
 
 ## Solution Architecture
@@ -59,8 +60,9 @@ Checkout will be implemented using RabbitMQ and MassTransit.
 
 ### Discount.API Service
 
-The main feature of Discount API is the synchronous communication via gRPC with 
+The main feature of Discount API is the synchronous communication via gRPC with Basket API. PostgreSQL is used as the database for this project.
 
+For this project, the Coupon table was created manually.
 
 ### API Gateway Architecture
 
@@ -121,11 +123,19 @@ Portainer runs as a Docker container.
 
 First time that you run Portainer, it is necessary to create a user and password (admin, admin12345678 for example).
 
+## PostgreSQL
+
+- Open-source Relational Database.
+- Reliability and flexibility.
+- ACID compliance.
+- Good performance.
 
 ### gRPC
 
 
 ## Links
+
+[Configurate PgAdmin4 using Docker](https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#environment-variables)
 
 ## Observations
 
