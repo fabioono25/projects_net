@@ -7,13 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
     <PackageReference Include="Npgsql" Version="6.0.7" />
     <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +18,11 @@
     <None Remove="Repositories\" />
     <None Remove="Extensions\" />
     <None Remove="Data\" />
+    <None Remove="Protos\" />
+    <None Remove="Services\" />
+    <None Remove="Protos\greet.proto" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Mapper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -28,5 +30,11 @@
     <Folder Include="Repositories\" />
     <Folder Include="Extensions\" />
     <Folder Include="Data\" />
+    <Folder Include="Protos\" />
+    <Folder Include="Services\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\discount.proto" GrpcServices="Server" />
   </ItemGroup>
 </Project>

@@ -7,7 +7,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 - Microservices.
 - Repository Pattern.
 - API Gateway.
-- gRPC
+- gRPC.
 
 
 ## Tools/Frameworks
@@ -23,6 +23,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 - MassTransit.
 - RabbitMQ.
 - Portainer.
+- AutoMapper.
 
 
 ## Solution Architecture
@@ -78,6 +79,10 @@ The main feature of Discount Grpc is to provide a synchronous microservice commu
 Update-Package --ProjectName Discount.Grpc
 ```
 
+AutoMapper tip:
+```
+CreateMap<Coupon, CouponModel>().ReverseMap();
+```
 
 ### API Gateway Architecture
 
@@ -148,8 +153,11 @@ Portainer runs as a Docker container.
 Popular and simple object mapping tool (micro-ORM). It maps queries to objects and, because of its low-level characteristics, it is very fast.
 
 
-### gRPC
+### gRPC (Google Remote Procedure Call)
 
+gRPC is an open-source RPC architecture designed by Google to achieve high-speed communication between microservices. gRPC allows developers to integrate services programmed in different languages. gRPC uses the Protobuf (protocol buffers) messaging format, which is a highly-packed, highly-efficient messaging format for serializing structured data. For a specific set of use-cases, a gRPC API can serve as a more efficient alternative to a REST API (more on this later).
+
+![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/grpc_rest.png)
 
 ## Links
 
