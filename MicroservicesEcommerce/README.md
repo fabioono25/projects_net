@@ -59,13 +59,24 @@ Discount will be calculated using gRPC inter-service synchronous communication.
 
 Checkout will be implemented using RabbitMQ and MassTransit.
 
-### Discount.API Service
+### Discount.API Service (temporary project)
 
 The main feature of Discount API is the synchronous communication via gRPC with Basket API. PostgreSQL is used as the database for this project.
 
 For this project, the Coupon table was created manually.
 
 Dapper is the micro-ORM for the communication with PostgreSQL.
+
+This project will be replaced by the Discount.Grpc Service.
+
+
+### Discount.Grpc Service
+
+The main feature of Discount Grpc is to provide a synchronous microservice communication with low latency and high throughput.
+
+```
+Update-Package --ProjectName Discount.Grpc
+```
 
 
 ### API Gateway Architecture
