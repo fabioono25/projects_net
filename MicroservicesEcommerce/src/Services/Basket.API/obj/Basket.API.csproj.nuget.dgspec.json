@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.23.2, )"
+            },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[6.0.10, )"

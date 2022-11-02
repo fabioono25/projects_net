@@ -159,6 +159,7 @@ gRPC is an open-source RPC architecture designed by Google to achieve high-speed
 
 ![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/grpc_rest.png)
 
+
 ## Links
 
 [Configurate PgAdmin4 using Docker](https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#environment-variables)
@@ -169,7 +170,36 @@ gRPC is an open-source RPC architecture designed by Google to achieve high-speed
 
 - MongoDB: The mongo command was removed from MongoDB 6.0 and above. The replacement is mongosh.
 
-- 
+- Solution if you have the error bellow, trying to integrate the Basket.API with Discount.Grpc:
+
+> Error starting gRPC call.
+> 
+> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+
+The problem occurred when running the WebAPI using .NET 6. Solution (Program.cs in Discount.Grpc project):
+
+```
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// configure Kestrel to setup a HTTP/2 endpoint without TLS
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenLocalhost(5003, o => o.Protocols = HttpProtocols.Http2);
+});
+``` 
+
+- Solution if you have the error bellow, trying to integrate Basket.API with Discount.Grpc:
+
+> Grpc.Core.RpcException: Status(StatusCode="Unimplemented", Detail="Bad gRPC response. HTTP status code: 404")
+> 
+
+It is possibly some missing DI in your code. In my case it was the mapping of DiscountService in Discount.Grpc:
+
+```
+app.MapGrpcService<DiscountService>();
+```
 
 ## How to extend it
 
