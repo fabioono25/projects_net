@@ -201,10 +201,6 @@ It is possibly some missing DI in your code. In my case it was the mapping of Di
 app.MapGrpcService<DiscountService>();
 ```
 
-## How to extend it
-
-
-
 
 
 
