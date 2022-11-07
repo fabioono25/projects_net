@@ -197,6 +197,8 @@ CQRS stands for Command and Query Responsibility Segregation, a pattern that sep
 
 [Clean Architecture - by Jacobs Data Solutions](https://blog.jacobsdata.com/2020/02/19/a-brief-intro-to-clean-architecture-clean-ddd-and-cqrs)
 
+[Clean Architecture with ASP.NET Core 6](https://learn.microsoft.com/en-us/events/dotnetconf-2021/clean-architecture-with-aspnet-core-6)
+
 ## Observations
 
 - MongoDB: The mongo command was removed from MongoDB 6.0 and above. The replacement is mongosh.
