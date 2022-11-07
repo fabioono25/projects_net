@@ -18,6 +18,7 @@ This code was constructed based on the articles [Microservices Architecture on .
 
 - .NET 6.
 - Visual Studio 2022 for Mac.
+- Entity Framework.
 - Docker.
 - Swagger.
 - MongoDB (document-oriented database, based on BSON-Binary JSON format).
