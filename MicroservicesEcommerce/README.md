@@ -2,12 +2,16 @@
 
 This code was constructed based on the articles [Microservices Architecture on .NET - Mehmet Ozkaya](https://medium.com/aspnetrun/microservices-architecture-on-net-3b4865eea03f)
 
-## Technologies
+## Technologies & Concepts
 
 - Microservices.
 - Repository Pattern.
 - API Gateway.
 - gRPC.
+- DDD
+- Clean Architecture
+- SOLID
+- CQRS
 
 
 ## Tools/Frameworks
@@ -84,6 +88,24 @@ AutoMapper tip:
 CreateMap<Coupon, CouponModel>().ReverseMap();
 ```
 
+### Ordering.API Service
+
+The Ordering Service is developed using Clean Architecture. They are 4 projects composing this Service:
+
+- Ordering.Domain (Core): no dependencies. Composed of Domain Services and distributed through Strategy Pattern, for example.
+- Ordering.Application (Core): it is a "bridge" between Domain layer and other layers. It is an Orcherstration layer. Depends on Domain.
+- Ordering.Infrastructure: external dependencies. Dependent on Application layer. Depends on Application Layer.
+- Ordering.API: presentation layer. Depends on Application and Infrastructure layers.
+
+
+### Clean Architecture
+
+
+Clean architecture is a software design philosophy that separates the elements of a design into ring levels. An important goal of clean architecture is to provide developers with a way to organize code in such a way that it encapsulates the business logic but keeps it separate from the delivery mechanism.
+
+![](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/cleanarchitecture.png)
+
+
 ### API Gateway Architecture
 
 
@@ -159,12 +181,21 @@ gRPC is an open-source RPC architecture designed by Google to achieve high-speed
 
 ![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/grpc_rest.png)
 
+### CQRS Pattern
+
+CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.
+
+![image](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/cqrs.png)
 
 ## Links
 
 [Configurate PgAdmin4 using Docker](https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#environment-variables)
 
 [Learn Dapper](https://www.learndapper.com/)
+
+[Clean Architecture - by Uncle Bob](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+[Clean Architecture - by Jacobs Data Solutions](https://blog.jacobsdata.com/2020/02/19/a-brief-intro-to-clean-architecture-clean-ddd-and-cqrs)
 
 ## Observations
 
