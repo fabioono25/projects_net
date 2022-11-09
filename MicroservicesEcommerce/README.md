@@ -107,25 +107,6 @@ Clean architecture is a software design philosophy that separates the elements o
 ![](https://github.com/fabioono25/projects_net/blob/main/MicroservicesEcommerce/assets/cleanarchitecture.png)
 
 
-### API Gateway Architecture
-
-
-
-## Construction Steps
-
-1. 
-
-## .NET Commands
-
-## Docker Commands
-
-```
-```
-
-## Kubernetes Commands
-
-## Other Notes
-
 ## MongoDB
 
 Document-oriented database. Every record in MongoDB is a document. Documents are stored in JSON-like Binary JSON (BSN). It uses collections instead of tables and Documents instead of rows.
